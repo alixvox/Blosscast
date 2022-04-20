@@ -18,7 +18,7 @@ echo "Press any key to Exit"
 # A while loop and if else statement to make it display a
 # Waiting for input message every 7 seconds.
 while [ true ] ; do
-read -t 7 -n 1
+read -t 10 -n 1
 if [ $? = 0 ] ; then
 exit ;
 else
