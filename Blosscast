@@ -1,0 +1,35 @@
+#!/usr/bin/bash
+# uses an api to get and display data from the
+# User requested city.
+# $city: the pointer / holder variable for user input
+# $month: The current month
+# curl function - Pulls requested data from the linked API
+# pointer for city var is appended to the end of the link
+#- A script by Matt H
+# Data Entry / Storage
+month=$(date +%B)
+echo "Enter City"
+read city
+echo "Current Month: $month"
+if [ "$month" = "April" ] || [ "$month" = "May" ] || [ "$month" = "June" ] ; then
+echo "$month is in Blossom Season" ;
+else
+echo "$month is NOT in Blossom Season"
+fi
+echo "The weather forcast for $city is:"
+# Makes program wait a little bit for effect before output.
+wait=(3)
+# API that retrieves 3 day forecast. $city is appended to the
+# end, and is the stored variable and value the user input.
+curl wttr.in/$city
+echo "Press any key to Exit"
+# A while loop and if else statement to make it display a
+# Waiting for input message every 7 seconds.
+while [ true ] ; do
+read -t 7 -n 1
+if [ $? = 0 ] ; then
+exit ;
+else
+echo "Waiting for a Key Press to Exit"
+fi
+done

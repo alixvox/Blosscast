@@ -1,4 +1,4 @@
-Wherether is an open-sourced terminal application that uses wttr.in to access weather data for a city.
+Blosscast is an open-sourced terminal application that uses wttr.in to access weather data for a city.
 
 OPERATION:
 1. Run the file in your terminal by navigating to the main directory and typing "./"
